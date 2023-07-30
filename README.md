@@ -29,28 +29,21 @@ Menjelaskan tujuan dari pernyataan masalah:
     
     - Berikut adalah Rumus untuk menghitung <em>precision</em>
     
-        $$
-        precision=TP/(TP+FP)
-        $$
+      $$precision=\frac{TP}{TP+PF}$$
     
     - Berikut adalah rumus untuk menghitung *recall*
     
-      $$
-      recall=TP/(TP+FN)
-      $$
+      $$recall=\frac{TP}{TP+FN}$$
     
     - Berikut adalah rumus untuk menghitung *f1-score*
     
-        $$
-        f1-score=2*(precision*recall/precision+recall)
-        $$
+      $$f1-score=2*\frac{precision*recall}{precision+recall}$$
     
     - Berikut adalah rumus untuk menghitung *accuracy*
-        $$
-        Accuracy = (TP + TN) / (TP + TN + FP + FN)
-        $$
+
+      $$Accuracy = \frac{TP + TN}{TP + TN + FP + FN}$$
     
-    - Rumus-rumus di atas dapat dihitung langsung menggunakan library python yaitu sklearn metrics
+- Rumus-rumus di atas dapat dihitung langsung menggunakan library python yaitu sklearn metrics
 
 ## Data Understanding
 Data yang digunakan adalah data yang berasal dari Kaggle, data ini berisikan berbagai fitur yang terkait dengan kesehatan dan gaya hidup pasien. Berikut adalah datanya [<em>Cardiovascular Diseases Risk Prediction Dataset</em>](https://www.kaggle.com/datasets/alphiree/cardiovascular-diseases-risk-prediction-dataset/code)
@@ -99,7 +92,7 @@ Dataset overview:
 
 
 
-![](assets\Gambar 1.png)
+![Gambar 1](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/401065aa-3a66-43aa-9b28-95c5df0e6b52)
 
 Gambar 1. Distribusi fitur numerikal
 
@@ -121,8 +114,7 @@ Hasil Analisis:
 
 
 
-![](assets\Gambar 2.png)
-
+![Gambar 2](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/23e5ea01-d2e6-4c1e-8fd9-63256a3a4063)
 Gambar 2. Distribusi fitur kategorikal
 
 Hasil Analisis:
@@ -157,7 +149,7 @@ Hasil Analisis:
 
 
 
-![](assets\Gambar 3.png)
+![Gambar 3](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/b4d001c7-6873-4e77-9b51-e0737e85d5a6)
 
 Gambar 3. Hubungan antara kondisi penyakit dengan beberapa variabel pilihan
 
@@ -229,7 +221,7 @@ Arthritis sedikit lebih sering terjadi pada pasien dengan riwayat merokok.
 
 
 
-![](assets\Gambar 4.png)
+![Gambar 4](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/151d2aa0-990b-4b1f-ac2d-81bda0f72e30)
 
 Gambar 4. Hubungan antara kondisi penyakit, general health dan age category
 
@@ -245,7 +237,7 @@ Untuk `Skin_Cancer`, prevalensi tampaknya lebih merata di berbagai peringkat kes
 
 
 
-![](assets\Gambar 5.png)
+![Gambar 5](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/ae160816-ded7-478c-9402-957aa3eeae87)
 
 Gambar 5. Hubungan antara kondisi penyakit, BMI dan exercise
 
@@ -279,7 +271,7 @@ Analisis korelasi mengungkapkan kekuatan dan arah hubungan antara fitur dan kond
 
 #### Correlation Matrix
 
-![](assets\Gambar 6.png)
+![Gambar 6](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/9aca6356-cc68-469c-b383-ecc3596e4388)
 
 Gambar 6. Heatmap Korelasi
 
@@ -299,7 +291,7 @@ Berikut adalah beberapa pengamatan dari heatmaps:
 
 
 
-![](assets\Gambar 7.png)
+![Gambar 7](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/3865403f-88f6-4242-b443-f77507f451eb)
 
 Gambar 7. Korelasi setiap fitur dengan variabel penyakit
 
@@ -332,7 +324,9 @@ Tabel 1. <em> Generative Describe Statistics </em>
 
 
 
-![](assets\Gambar 8.png)Gambar 8. Boxplot kolom numerikal
+![Gambar 8](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/0ed8a313-02f3-4482-b55a-6b210ec80394)
+
+Gambar 8. Boxplot kolom numerikal
 
 - Hasil Analisis
 
@@ -365,9 +359,9 @@ Tabel 1. <em> Generative Describe Statistics </em>
     Berikut adalah final *preprocessing pipeline* yang akan digunakan pada model:
 
 
-![](assets\Gambar 9.png)
+![Gambar 9](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/02605fdb-de44-4dbd-88e7-574ff5d267e8)
 
-​             Gambar 9. preprocessing pipeline
+Gambar 9. preprocessing pipeline
 
 Diatas adalah rangkaian dalam pembuatan pipeline.[2]
 
@@ -411,7 +405,7 @@ Diatas adalah rangkaian dalam pembuatan pipeline.[2]
 Model yang digunakan adalah model klasifikasi. Pertama akan dilakukan evaluasi dengan ROC AUC. ROC AUC adalah semacam alat ukur performance untuk classification problem dalam menentukan threshold dari suatu model. [4]
 ### Receiver Operating Characteristic
 
-![](assets\Gambar 10.png)
+![Gambar 10](https://github.com/ch3nxhari/cvd_predictive_analytics/assets/117896727/56089fdf-f64a-4931-b3af-4298d5d2ad25)
 
 Gambar 10. ROC AUC pada setiap model
 
